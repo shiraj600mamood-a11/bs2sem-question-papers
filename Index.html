@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BS 2nd Semester Question Papers</title>
+
+<meta name="description" content="Download BS 2nd Semester Question Papers PDF for all subjects.">
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f4f4f4;
+}
+
+header{
+    background:#007bff;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
+
+.search-box{
+    text-align:center;
+    margin:20px 0;
+}
+
+input{
+    width:80%;
+    max-width:500px;
+    padding:10px;
+}
+
+.paper{
+    background:white;
+    padding:15px;
+    margin:10px 0;
+    border-radius:8px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+a.download{
+    background:green;
+    color:white;
+    text-decoration:none;
+    padding:8px 15px;
+    border-radius:5px;
+}
+
+footer{
+    text-align:center;
+    padding:15px;
+    background:#222;
+    color:white;
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>BS 2nd Semester Question Papers</h1>
+    <p>Previous Year Question Papers PDF</p>
+</header>
+
+<div class="container">
+
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search Subject...">
+    </div>
+
+    <div class="paper">
+        <h3>Mathematics</h3>
+        <a href="#" class="download">Download PDF</a>
+    </div>
+
+    <div class="paper">
+        <h3>Physics</h3>
+        <a href="#" class="download">Download PDF</a>
+    </div>
+
+    <div class="paper">
+        <h3>Chemistry</h3>
+        <a href="#" class="download">Download PDF</a>
+    </div>
+
+    <div class="paper">
+        <h3>Zoology</h3>
+        <a href="#" class="download">Download PDF</a>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 BS 2nd Semester Question Papers
+</footer>
+
+<script>
+const search = document.getElementById("search");
+
+search.addEventListener("keyup", function(){
+    let filter = search.value.toLowerCase();
+    let papers = document.querySelectorAll(".paper");
+
+    papers.forEach(function(item){
+        let text = item.innerText.toLowerCase();
+
+        if(text.includes(filter)){
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
+});
+</script>
+
+</body>
+</html>
