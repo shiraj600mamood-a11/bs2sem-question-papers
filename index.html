@@ -17,14 +17,15 @@ body{
     margin:0;
     background:#f4f4f4;
 }
-
 header{
     background:#007bff;
     color:white;
-    text-align:center;
     padding:20px;
-}
 
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
 .container{
     width:90%;
     max-width:1000px;
@@ -58,7 +59,15 @@ a.download{
     padding:8px 15px;
     border-radius:5px;
 }
+.logo{
+    width:80px;
+    height:80px;
+}
 
+.title{
+    flex:1;
+    text-align:center;
+}
 footer{
     text-align:center;
     padding:15px;
@@ -75,17 +84,17 @@ footer{
   
 <body>
 
-<header class="header">
+<header>
 
-<img src="logo.png.png" class="logo left-logo">
+<img src="logo.png.png" class="logo">
 
 <div class="title">
 <h1>Bhattadev University, Bajali</h1>
-<h3><p>BSc 1st and 2 Semester Question Papers</p></h3>
+<p>BSc 1st and 2 Semester Question Papers</p>
 <p>Previous Year Question Papers PDF</p>
 </div>
 
-<img src="logo.png.png" class="logo right-logo">
+<img src="logo.png.png" class="logo">
 
 </header>
 
