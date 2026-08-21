@@ -709,24 +709,10 @@ a.download{
   </div>
 
 </footer>
-<hr>
 
-const search = document.getElementById("search");
 
-search.addEventListener("keyup", function(){
-    let filter = search.value.toLowerCase();
-    let papers = document.querySelectorAll(".paper");
 
-    papers.forEach(function(item){
-        let text = item.innerText.toLowerCase();
-
-        if(text.includes(filter)){
-            item.style.display = "block";
-        } else {
-            item.style.display = "none";
-        }
-    });
-});
+        
 </script>
     
 </body>
