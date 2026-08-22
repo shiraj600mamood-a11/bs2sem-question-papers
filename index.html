@@ -326,7 +326,41 @@ a.download{
     gap: 15px;
   }
     }
-    
+  .semester-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 1 line mein 3 box */
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.paper {
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1.5px solid #007bff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.paper h4 {
+    margin: 0 0 8px 0;
+    font-size: 13px;
+}
+
+.download {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 11px;
+    text-align: center;
+}
+  
 .semester-container {
     display: grid; 
     grid-template-columns:grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -445,7 +479,7 @@ a.download{
         <h3> IDC Physics 2025</h3>
         <a href="IDC physics sem-1.pdf" class="download">Download PDF</a>
     </div>
-<div class="paper">
+    <div class="paper">
         <h3>IDC Zoology 1 sem 2025</h3>
         <a href="1st sem IDC ZOO 2025- compressed (1)-compressed.pdf"  class="download">Download PDF</a>
    </div>
@@ -465,11 +499,11 @@ a.download{
         <h3>SEC practical Maths sem-1 2025</h3>
         <a href="SEC maths  SEM-1 (practical).pdf" class="download">Download PDF</a>
     </div>
-  <div class="paper">
+    <div class="paper">
         <h3>Physics sessional exam Minor Question</h3>
         <a href="1st semphysics sessional question paper.pdf"  class="download">Download PDF</a>
     </div>
-</div>  
+</div>
   </h1>
 
 
