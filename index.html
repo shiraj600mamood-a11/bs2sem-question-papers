@@ -31,9 +31,6 @@
     border-radius: 12px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
-</style>
-    
-<style>
 body{
     font-family: Arial, sans-serif;
     margin:0;
@@ -276,7 +273,7 @@ header{
   .footer-bottom-links {
     justify-content: center;
   }
-}
+
 
 
 @media (max-width: 480px) {
@@ -332,16 +329,56 @@ header{
     font-size: 11px;
     text-align: center;
 }
-  
+  /* =========================
+   SEARCH BOX
+========================= */
 
-} 
+.search-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.search-box {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: #fff;
+    border: 2px solid #2874f0;
+    border-radius: 10px;
+    outline: none;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+}
+
+.search-box::placeholder {
+    color: #888;
+}
+
+.search-box:focus {
+    border-color: #1a5dcc;
+    box-shadow: 0 0 0 3px rgba(40, 116, 240, 0.15);
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .search-container {
+        margin: 15px auto;
+        padding: 0 12px;
+    }
+
+    .search-box {
+        padding: 12px 15px;
+        font-size: 15px;
+    }
+}
 </style>
 
-</head>
-
-</div>
-
-</div>
+</hea>
   
 <body>
 
@@ -359,9 +396,20 @@ header{
 <h2><p><b></b>Previous Year Question Papers PDF</b></p></h2>
 </div>
 </header>
-  <div class="search-box">
-        <input type="text" id="search" placeholder="Search Subject...">
-  </div>
+  <body>
+
+<div class="search-container">
+    <input
+        type="text"
+        id="searchBox"
+        class="search-box"
+        placeholder="🔍 Search question papers..."
+    >
+</div>
+
+<!-- Baaki tumhara website content -->
+
+  </body>
 <h1>
       <center><b><u>Semister-1</u></b></center>
       
