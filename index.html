@@ -333,13 +333,78 @@ header{
 }
 
 <
+  .banner {
+    background: #087ff5;
+    padding: 25px 15px 55px;
+    text-align: center;
+    position: relative;
+}
+
+.banner img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+.banner-text h1 {
+    color: white;
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.banner-text h2 {
+    color: white;
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+.banner-text p {
+    color: white;
+    font-size: 17px;
+}
+
+/* Search box banner ke andar */
+#searchBox {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 400px;
+    max-width: 80%;
+    height: 45px;
+
+    padding: 0 15px;
+    font-size: 17px;
+
+    border: 2px solid #1683df;
+    border-radius: 7px;
+    outline: none;
+    background: white;
+    box-sizing: border-box;
+}
+
+#searchBox:focus {
+    border-color: #0066cc;
+}
 </style>
 
 </header>
   
 <body>
 
- 
+ <div class="banner">
+    <img src="logo.png" alt="Logo">
+
+    <div class="banner-text">
+        <h1>BhattadevQuestion.com</h1>
+        <h2>BSc 1st, 2nd, 3rd Semester Question Papers</h2>
+        <p>Previous Year Question Papers PDF</p>
+    </div>
+
+    <!-- Search Box -->
+    <input type="text" id="searchBox" placeholder="Search Subject...">
+ </div>
   <section style="margin-top: 30px;">
     <h2 style="color: #1a73e8;">About Bhattadev University BSc Exams</h2>
     <p>Bhattadev University, Bajali, Assam conducts BSc exams every year for Science students. The university follows NEP 2020 and CBCS pattern. Students need previous year papers to understand exam pattern, important questions, and marking scheme.</p>
