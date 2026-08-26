@@ -362,30 +362,38 @@ header{
     color: white;
     font-size: 17px;
 }
-
-/* Search box banner ke andar */
+  /* Search Box */
 #searchBox {
-    position: absolute;
-    bottom: -25px;
-    left: 50%;
-    transform: translateX(-50%);
-
+    display: block;
     width: 400px;
-    max-width: 80%;
+    max-width: calc(100% - 30px);
     height: 45px;
 
+    margin: 20px auto;
     padding: 0 15px;
+
     font-size: 17px;
 
     border: 2px solid #1683df;
     border-radius: 7px;
     outline: none;
+
     background: white;
     box-sizing: border-box;
 }
 
+/* Search box focus */
 #searchBox:focus {
     border-color: #0066cc;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    #searchBox {
+        width: calc(100% - 20px);
+        max-width: 400px;
+        margin: 15px auto;
+    }
 }
 </style>
 
@@ -406,9 +414,6 @@ header{
 <h2><p>BSc 1st ,2nd, 3rd Semester Question Papers</p></h2>
 <h2><p><b></b>Previous Year Question Papers PDF</b></p></h2>
 </div>
-</header>
-  
-
 <div class="search-container"
         type="text"
         id="searchBox"
@@ -417,9 +422,6 @@ header{
     >
 </div>
 
-<!-- Baaki tumhara website content -->
-
-  </body>
 <h1>
       <center><b><u>Semister-1</u></b></center>
       
