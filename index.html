@@ -701,6 +701,26 @@ header {
   </div>
 
 </footer>
+    <!-- Footer ke baad aur </body> se pehle -->
+    <script>
+        const searchInput = document.getElementById('searchBox');
+        
+        searchInput.addEventListener('keyup', function() {
+            const filter = searchInput.value.toLowerCase();
+            const papers = document.querySelectorAll('.paper');
+
+            papers.forEach(function(paper) {
+                const text = paper.innerText.toLowerCase();
+                if (text.includes(filter)) {
+                    paper.style.display = "flex";
+                } else {
+                    paper.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
 
 
 
