@@ -650,6 +650,60 @@ body {
     opacity: 0;
   }
 }
+        ♥️♥️🔥♥️♥️♥️🔥🔥🔥🔥♥️♥️🔥🔥♥️♥️♥️🔥🔥♥️🔥🔥🔥♥️♥️🔥🔥🎉🔥🔥🔥🎉🎉
+   /* Footer Container jiske border par light ghumegi */
+.footer-glow-box {
+    position: relative;
+    width: 100%;
+    background: #0b192c;
+    border-radius: 16px;
+    padding: 30px 20px;
+    margin-top: 40px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(0, 255, 204, 0.2);
+}
+
+/* Rotating Light Border */
+.footer-glow-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        transparent, 
+        transparent, 
+        transparent, 
+        #00ffcc, 
+        #0055ff, 
+        #ff007f, 
+        #00ffcc
+    );
+    z-index: 1;
+    animation: rotateFooterLight 4s linear infinite;
+}
+
+/* Inner Dark Background Mask taaki content ke pichhe dark rahe */
+.footer-glow-box::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: #0b192c;
+    border-radius: 14px;
+    z-index: 2;
+}
+
+/* Footer ka asli content upar rakhne ke liye */
+.footer-content {
+    position: relative;
+    z-index: 3;
+}
+
+@keyframes rotateFooterLight {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
    
    
 </style>
@@ -938,7 +992,7 @@ body {
    
 
 <footer class="site-footer">
-
+<div class="footer-glow-box>
   <div class="footer-container">
 
     <!-- About -->
@@ -1028,7 +1082,7 @@ body {
   </div>
 
 
-  
+</div>
 </div>
 </footer>
     <!-- Footer ke baad aur </body> se pehle -->
