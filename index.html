@@ -445,7 +445,43 @@ body {
 .contact-highlight:hover {
   background: #ffca2c;
 }
-   
+   /* 📱 MOBILE FOOTER FIX */
+@media (max-width: 768px) {
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 30px 20px;
+  }
+
+  .footer-about {
+    grid-column: auto;
+  }
+
+  .footer-column {
+    width: 100%;
+  }
+
+  .footer-important-links {
+    width: 100%;
+  }
+
+  .footer-important-links a {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+  }
+}
 </style>
 
 </header>
