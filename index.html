@@ -239,6 +239,32 @@ body {
 /* =========================================
    5. PROFESSIONAL FOOTER
    ========================================= */
+
+   .footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr 1.5fr;
+  gap: 30px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .site-footer {
   background: #0b1f33;
   color: #ffffff;
