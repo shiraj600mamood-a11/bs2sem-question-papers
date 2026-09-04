@@ -405,11 +405,27 @@ body {
    6. RESPONSIVE MEDIA QUERIES (MOBILE)
    ========================================= */
 @media (max-width: 768px) {
-  .footer-container {
-    grid-template-columns: 1fr 1fr;
-    gap: 35px 20px;
-    padding: 35px 20px 25px;
-  }
+    .footer-container {
+  grid-template-columns: 1fr;
+  gap: 30px;
+  padding: 35px 20px 25px;
+}
+
+.footer-about {
+  grid-column: auto;
+}
+
+.footer-bottom {
+  flex-direction: column;
+  text-align: center;
+  gap: 12px;
+}
+
+.footer-bottom-links {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+  
 
   .footer-about {
     grid-column: 1 / -1;
@@ -445,43 +461,7 @@ body {
 .contact-highlight:hover {
   background: #ffca2c;
 }
-   /* 📱 MOBILE FOOTER FIX */
-@media (max-width: 768px) {
 
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: 25px;
-    padding: 30px 20px;
-  }
-
-  .footer-about {
-    grid-column: auto;
-  }
-
-  .footer-column {
-    width: 100%;
-  }
-
-  .footer-important-links {
-    width: 100%;
-  }
-
-  .footer-important-links a {
-    width: 100%;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-    gap: 12px;
-  }
-
-  .footer-bottom-links {
-    justify-content: center;
-    flex-wrap: wrap;
-    padding-bottom: 20px;
-  }
-}
 </style>
 
 </header>
