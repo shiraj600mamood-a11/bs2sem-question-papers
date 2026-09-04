@@ -615,6 +615,42 @@ body {
   color: #718096;
   text-align: center;
 }
+   💚💯💚💚💚💚💚💚💚
+   /* Background Falling Rain Effect */
+.rain-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1; /* Taki website ke text ya buttons ke pichhe rahe */
+}
+
+.drop {
+  position: absolute;
+  background: linear-gradient(transparent, rgba(52, 211, 153, 0.8));
+  width: 2px;
+  height: 25px;
+  opacity: 0.7;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(105vh);
+    opacity: 0;
+  }
+}
+   
    
 </style>
 
@@ -622,7 +658,8 @@ body {
   
 <body>
 
- 
+ <div class="rain-container" id="rain"></div>
+   
   <section style="margin-top: 30px;">
     <h2 style="color: #1a73e8;">About Bhattadev University BSc Exams</h2>
     
@@ -1011,6 +1048,20 @@ body {
                 }
             });
         });
+       const rainContainer = document.getElementById('rain');
+if (rainContainer) {
+    const dropCount = 35; // Boondon ki sankhya
+    for (let i = 0; i < dropCount; i++) {
+        const drop = document.createElement('div');
+        drop.classList.add('drop');
+        drop.style.left = Math.random() * 100 + 'vw';
+        drop.style.top = Math.random() * -50 + 'px';
+        drop.style.animationDuration = (Math.random() * 1.5 + 0.8) + 's';
+        drop.style.animationDelay = (Math.random() * 5) + 's';
+        rainContainer.appendChild(drop);
+    }
+}
+       
     </script>
 </body>
 </html>
