@@ -704,6 +704,102 @@ body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+   /* Navigation Menu Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0056b3;
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    background: #0056b3;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.logo span {
+    color: #0f172a;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #64748b;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #0056b3;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #0f172a;
+}
+
+/* Mobile Responsive Menu */
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        border-bottom: 1px solid #cbd5e1;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 8px 0;
+    }
+}
    
    
 </style>
@@ -722,6 +818,27 @@ body {
         Find, view and download question papers easily.</p></h4>
  
   </section>
+   <header id="header">
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon"><i class="fas fa-feather-pointed"></i></div>
+            <span>Bhattadev</span>Question Hub
+        </div>
+        
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="semester-1.html">Semester 1</a></li>
+            <li><a href="semester-2.html">Semester 2</a></li>
+            <li><a href="semester-3.html">Semester 3</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="menu-btn" id="menuBtn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+   </header>
    
 <header class="hero-header">
     <img src="file_0000000057bc82088b4a69d39cb1c706.png" alt="Bhattadev Question Hub Logo">
@@ -1086,7 +1203,23 @@ body {
 </footer>
     <!-- Footer ke baad aur </body> se pehle -->
     <script>
-        const searchInput = document.getElementById('searchBox');
+       const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
+
+menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    const icon = menuBtn.querySelector('i');
+    if (navLinks.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+    } else {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+    }
+});
+       
+       
+        🥰🤔const searchInput = document.getElementById('searchBox');
         
         searchInput.addEventListener('keyup', function() {
             const filter = searchInput.value.toLowerCase();
